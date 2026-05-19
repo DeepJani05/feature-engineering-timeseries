@@ -1,0 +1,19 @@
+[project]
+name = "feature-engineering-timeseries"
+version = "1.0.0"
+description = "Production feature engineering pipeline for financial time-series forecasting."
+requires-python = ">=3.11"
+authors = [{ name = "Deep Jani", email = "deepjani50@gmail.com" }]
+license = { text = "MIT" }
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "B", "UP"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"
+testpaths = ["tests"]

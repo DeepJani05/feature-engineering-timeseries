@@ -1,0 +1,29 @@
+# Feature engineering pipeline configuration
+
+input:
+  source: csv                    # csv | parquet | az://
+  path: data/sample_ohlcv.csv
+  timestamp_col: timestamp
+
+features:
+  # If null, all families are built
+  families: null
+  drop_warmup: true
+
+output:
+  format: parquet                # parquet | sql
+  path: data/features.parquet
+
+validation:
+  enabled: true
+  label_horizon: 5
+  train_window: 504              # ~2 years of daily bars
+  test_window: 21                # ~1 month
+  step: 21
+  classify: false                # if true, use sign(forward_return) as label
+
+azure:
+  # Set via env vars in CI/CD:
+  #   AZURE_STORAGE_CONNECTION_STRING
+  #   AZURE_SQL_CONNECTION_STRING
+  sql_table: dbo.features_daily

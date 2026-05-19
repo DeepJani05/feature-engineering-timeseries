@@ -1,0 +1,21 @@
+# Core
+numpy==2.1.3
+pandas==2.2.3
+pyarrow==18.0.0          # parquet engine
+
+# ML / forecasting
+scikit-learn==1.5.2
+xgboost==2.1.2
+
+# Azure I/O (used only by io/azure_blob.py and io/azure_sql.py — lazy imports)
+azure-storage-blob==12.23.1
+sqlalchemy==2.0.36
+pyodbc==5.2.0
+
+# Config / logging
+pyyaml==6.0.2
+python-json-logger==2.0.7
+
+# Testing
+pytest==8.3.3
+pytest-cov==6.0.0
