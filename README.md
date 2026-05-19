@@ -2,7 +2,7 @@
 
 > A production-grade, model-agnostic feature pipeline that transforms raw OHLCV data into **40+ engineered features** — rolling statistics, momentum, lags, volatility regimes — validated with walk-forward back-testing, persisted to Azure, and served to Power BI for analyst self-service.
 
-[![CI](https://github.com/<your-handle>/feature-engineering-timeseries/actions/workflows/ci.yml/badge.svg)](./.github/workflows/ci.yml)
+
 [![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
 
 ---
